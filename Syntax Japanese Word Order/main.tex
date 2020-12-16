@@ -1,0 +1,169 @@
+\documentclass{article}
+\usepackage[letterpaper, margin=1.5in]{geometry}
+\usepackage[utf8]{inputenc}
+
+\usepackage{tikz-qtree}
+\usepackage{setspace}
+\doublespacing
+\usetikzlibrary{trees}
+\usepackage{natbib}
+\usepackage{gb4e}
+
+
+\title{Object Scrambling, the EPP, and Focus in Japanese}
+\author{Derek Andersen \\ \\
+        Department of Linguistics \\
+		Stony Brook University}
+\date{December 19, 2019}
+
+\begin{document}
+\maketitle
+
+\section{Introduction}
+The base word order of Japanese can be considered to be SOV, like English. However, an alternate order, OSV, exists and one analysis for this optionality (in Subject and Object positions) is the idea that the scrambled order (OSV) is derived from the base order (SOV) via a particular \textit{optional} mechanism. In this paper I will present an overview of the issue of optional word-scrambling in Japanese from a syntactic perspective, citing analyses from \cite{Miyagawa2001} and \cite{Miyagawa2005}, among others. In section \ref{jpnwordorder}, I briefly discuss the word order of Japanese and provide a background of the EPP, extending its usual application (for agreement-prominent languages) to focus-prominent languages like Japanese. Discussion here points to the possibility that the ``optional mechanism" is perhaps obligatory. In section \ref{negscope}, I present an example of how the scope of negation can allow for ambiguity in interpretation, and use this to support the analysis given by \cite{Miyagawa2001}, wherein focus features are the motivation for A'-movement and object scrambling. I conclude the paper in section \ref{conclusion}.
+
+\section{Japanese word order}
+\label{jpnwordorder}
+It is widely believed that the base (underlying) order of Japanese word order is SOV, though the alternate order OSV occurs as well. \cite{SaitoHoji1983} propose that the OSV order is “derived by an optional application of a transformational rule". \cite{Miyagawa2001} proposes as a followup, however, that this “optional application" is actually obligatory, since lexical insertion of a subject and an object (following the presence of a transitive verb) is obligatory, and the motivation for this optionality is hard to capture. Before discussion of the mechanism that licenses this “optionality," however, I will provide a background of the EPP and how it functions in Japanese, since the analysis of the optionality phenomenon involves movement to Spec TP (and the EPP is usually concerned with movement of this type).
+
+\subsection{The EPP and focus}
+According to the extended projection principle (EPP), the Specifier of TP must be occupied. Furthermore, Spec TP is usually a landing site for Subject DPs, and the feature that motivates this movement and  occupation is an agreement EPP feature on T \citep[p. 216]{Adger2003}. Piggybacking on \cite{Miyagawa2005}'s assumption, I will assume that all languages have the EPP or something similar that licenses the type of  movement I will be concerned with. \\
+
+Japanese is a language that lacks morphological agreement (e.g. Subject-Verb agreement). Because of this, operations like movement to Spec TP to satisfy the EPP seemingly lack motivation, since the EPP (in English, for example) selects the phrase with which T agrees and moves it to Spec TP. For this reason, these operations need to be accounted for in some other way. For languages like Japanese that:
+
+\begin{itemize}
+    \item [a)] Lack agreement of this sort, and
+    \item [b)] Possess the optionality for Subject and Object positions mentioned earlier,
+\end{itemize}
+the assumption is that the EPP still exists, but is motivated by something other than an agreement feature on T. \cite{Miyagawa2005} claims that this other motivation is a \textit{focus} feature on T, rather than an agreement feature. He goes on to say that Japanese is a \textit{focus-prominent} language, unlike English for example, which is an \textit{agreement-prominent} language. In contrast to an agreement-prominent language which forces the movement of the agreeing phrase to Spec TP, a focus-prominent language selects a DP with the focus feature and forces that to move to Spec TP. The crucial difference here is that there can only be one agreeing phrase in the former case, but there may be multiple candidate phrases with a focus feature in the latter case. This is precisely what allows for the “optionality" in surface word order mentioned earlier. Furthermore, this analysis also importantly allows something other than a Subject DP to move into Spec TP, which needs to be the case, as we will see.
+
+\section{Universal quantifiers and the scope of Neg}
+\label{negscope}
+\cite{Miyagawa2001} presents some examples that further illustrate the way the EPP/focus relationship works in Japanese. These examples contain the universal quantifier \textit{zenin} ‘all'. In example \ref{allnot}, we see the base word order, SOV, where `all' is in Subject position. Here, the only interpretation is one where the quantifier `all' is higher than negation in the tree, i.e. total negation.
+
+\begin{exe}
+    \ex \gll zenin-ga tesuto-o uke-na-katta\\ 
+        all-Nom test-Acc take-Neg-Past\\ 
+    \glt    `All did not take the test.'
+    \label{allnot}
+\end{exe}
+In \ref{notall} however, the order is OSV, and ambiguity arises. There are two possible interpretations:
+\begin{itemize}
+    \item [a)] One in which the quantifier is higher than negation (total negation), or
+    \item [b)] One in which negation is higher than the quantifier (partial negation).
+\end{itemize}
+
+
+\begin{exe}
+\ex \gll  tesuto-o zenin-ga uke-na-katta\\ 
+        test-Acc all-Nom take-Neg-Past\\ 
+    \glt    `The test, all did not take.'
+    \label{notall}
+\end{exe}
+
+The question, now, is What accounts for this ambiguity in interpretation? In my description of the two possible interpretations for \ref{notall}, I used the word ``higher" to describe the relative positions of the quantifier \textit{zenin} `all' and Neg in the tree. In \ref{allnot}, \textit{zenin} begins in Spec \textit{v}P, and the EPP feature on T targets it since it has \textit{focus} and motivates its move to Spec TP. This produces the surface order SOV, and since S (quantifier) $>$ O (Neg) in the tree structure, only the total negation interpretation is obtained. This is illustrated in \ref{SOVtree}, taken from \cite{Miyagawa2001}. The position of Neg, crucially, is lower in the tree than Spec TP, but its exact position is not relevant for this analysis. \cite{Klima1964} states that a quantifier is in the scope of negation iff it is C-commanded by Neg. Thus, in the sentence in \ref{allnot} and \ref{SOVtree}, the quantifier is not in the scope of negation, like we expect, because there is no C-command of `all' by Neg. It has moved out of the scope of Neg.
+
+\begin{exe}
+    \ex
+    \label{SOVtree}
+    \begin{tikzpicture}[%
+  sibling distance=.5cm,
+  empty/.style={draw=none},
+  tlabel/.style={font=\footnotesize\color{red!70!black}}]
+\Tree  [.TP  
+         [.all_{i} ]
+         [.T'  
+            [. ?
+                [.\textit{v}P
+                    [.$<$all$>$_{i} ]
+                    [.\textit{v}'
+                        [.VP  \edge[roof]; {...the test (Obj)...} ]
+                        [.\textit{v} ]
+                    ]
+                ]
+                [.Neg ]
+            ] 
+            [.T ] 
+         ] 
+       ]
+\end{tikzpicture}
+\\
+`All did not take the test.'
+\end{exe}
+
+We then have the case of example \ref{notall}, for which there are two possible interpretations: one with partial negation, and one with total negation. I will first look at the partial negation case, illustrated by the tree in \ref{partialtree} \citep{Miyagawa2001}. In this case, the Object, `the test', has \textit{focus} and moves to Spec TP by way of the EPP feature on T (which selects the \textit{focus} phrase). The quantifier `all' must then stay \textit{in-situ} in Spec \textit{v}P, where it is C-commanded by Neg. This C-command relation puts the quantifier in Neg's scope, giving the partial negation interpretation.
+
+\begin{exe}
+    \ex
+    \label{partialtree}
+    \begin{tikzpicture}[%
+  sibling distance=.5cm,
+  empty/.style={draw=none},
+  tlabel/.style={font=\footnotesize\color{red!70!black}}]
+\Tree  [.TP  
+         [.Obj_{i} \edge[roof]; {the test} ]
+         [.T'  
+            [. ?
+                [.\textit{v}P
+                    [.all ]
+                    [.\textit{v}'
+                        [.VP  \edge[roof]; {...$<$the test (Obj)$>$_{i}...} ]
+                        [.\textit{v} ]
+                    ]
+                ]
+                [.Neg ]
+            ] 
+            [.T ] 
+         ] 
+       ]
+\end{tikzpicture}
+\\
+`The test, all did not take.' (partial negation: Neg $>$ all)
+\end{exe}
+
+Lastly, we have the total negation interpretation for \ref{notall}. The tree in \ref{totaltree} \citep{Miyagawa2001} illustrates the movement operations for its derivation. The quantifier `all' first moves to Spec TP to satisfy the EPP feature on T. At this point, the quantifier is not in the scope of Neg (no C-command of `all' by Neg), so the total negation interpretation is obtained. However, the Object `the test' also undergoes a type of movement referred to by \cite{Miyagawa2001} as A'-movement to some higher landing site in the structure (I will assume this higher landing site is Spec CP — the exact structural relation is not important for this analysis). It's this type of movement theory that is used to account for ``scrambling" of an Object, and the alternate word order OSV.
+
+\begin{exe}
+    \ex
+    \label{totaltree}
+    \begin{tikzpicture}[%
+  sibling distance=.5cm,
+  empty/.style={draw=none},
+  tlabel/.style={font=\footnotesize\color{red!70!black}}]
+\Tree  [.CP
+        [.Obj_{k} \edge[roof]; {the test} ]
+        [.... 
+        [.TP  
+         [.all_{i} ]
+         [.T'  
+            [. ?
+                [.\textit{v}P
+                    [.$<$all$>$_{i} ]
+                    [.\textit{v}'
+                        [.VP  \edge[roof]; {...$<$the test (Obj)$>$_{k}...} ]
+                        [.\textit{v} ]
+                    ]
+                ]
+                [.Neg ]
+            ] 
+            [.T ] 
+         ] 
+        ]
+       ]
+       ]
+\end{tikzpicture}
+\\
+`The test, all did not take.' (total negation: all $>$ Neg)
+\end{exe}
+
+\subsection{Issues}
+\label{issues}
+The trees presented along with their proposed movements (in particular, those in \ref{totaltree}) leads to the obvious question, What motivates the second movement of the Object to a high position like Spec CP? If we assume that there can only be one movement motivated by the EPP requirement in order to fill Spec TP, then we would not expect further movements after the EPP is satisfied. For this reason, a problem emerges in regard to the types of features on C, for example, if that is in fact the functional head above T in this case. \cite{Miyagawa2005} suggests that the agreement (or focus) originates on C and ``percolates down" to T. If this is the case, it would possibly account for the two movements (one by a feature on T, for example, and another by a feature on C, higher up in the tree structure) and the allowance of this type of object scrambling.
+
+\section{Conclusion}
+\label{conclusion}
+The analysis in this paper looked at the word order of Japanese, namely SOV, and attempted to provide a concise summary of the motivation(s) for the emergence of the alternate word order, OSV. The shift from considering Japanese a language that uses agreement features on T to inspire EPP movement to Spec TP, to a focus-prominent language that instead uses focus features on T is what allowed us to account for the movement of something \textit{other than a subject DP} into Spec TP. The allowance of Object DPs, for example, to enter Spec TP is a necessary component for the alternate word order. Without it, the Object would likely remain \textit{in-situ} in the argument position of \textit{v}, right of the Subject (linearly). Discussion of the scope of Neg over quantifiers gave insight into the movements that occurred in an OSV sentence, and led us to the conclusion that there must be structure higher than TP involved to license object scrambling.
+
+\bibliographystyle{apa}
+\bibliography{refs}
+\end{document}

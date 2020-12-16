@@ -1,0 +1,332 @@
+\documentclass{article}
+\usepackage[letterpaper, margin=1.5in]{geometry}
+\usepackage{ot-tableau}
+\usepackage{setspace}
+\doublespacing
+\usepackage[utf8]{inputenc}
+\usepackage{natbib}
+\usepackage{gb4e}
+\usepackage{rotating}
+
+\title{Gemination in Japanese Loanwords}
+\author{Derek Andersen \\ \\
+        Department of Linguistics \\
+		Stony Brook University}
+\date{December 10, 2019}
+
+\begin{document}
+
+\maketitle
+
+
+\section{Introduction}
+
+Japanese borrowings of English (and other) words provide a rich source of data for the analysis of the gemination of certain consonantal segments in Japanese, and in  particular, the types of segments for which Japanese phonology allows gemination, and the phonological  implications of gemination with respect to both the input (source word) and output (phonemicized) forms. My analysis of gemination in Japanese loanword phonology will be focusing mainly on the \textit{voiced obstruent} geminates /bb/, /dd/, /gg/, and the motivation for gemination in loanwords. Specifically, the issues that arise with foreign word gemination when compared to the native phonotactics of Japanese. In section \ref{phonemic}, I  present some background on the native phonemic inventory of Japanese, and some evidence for the restriction on voiced geminates in the native phonology. In section \ref{lexical strata}, I give an overview of the distribution of the lexical strata of Japanese. In section \ref{licensing}, I discuss some cases of gemination in the creation of Japanese loanwords, and present an Optimality Theory \citep{PrinceSmolensky1993} analysis for these cases based on syllable weight and double voiced obstruent constructions. Section \ref{Constraints} contains a list of constraints that I use throughout this paper for my OT analyses.
+
+
+\section{Phonemic inventory of Japanese}
+\label{phonemic}
+
+The native phonemic inventory of Japanese consists of singleton consonants (like /p/, /t/, /k/) as well as geminate consonants (like /pp/, /tt/, /kk/). As shown by the minimal pair data in \ref{minimalpair}, they are contrastive, and thus separate phonemes. \citep[p. 2]{Kubozono2009} 
+
+\begin{exe}
+    \ex
+    \label{minimalpair}
+    \begin{itemize}
+        \item [a] /kita/ ‘came' vs. /kitta/ ‘cut (past)'
+        \item [b] /saki/ ‘point' vs. /sakki/ ‘a short time ago'
+    \end{itemize}
+    
+\end{exe}
+
+However, native Japanese phonotactics disallow the gemination of certain consonants. In particular, the gemination of voiced obstruents (/b/, /d/, /g/, /z/, etc.) is prohibited. The data in sections \ref{emph} and \ref{-ri} present some evidence for the prohibition of voiced geminates in the native phonology of Japanese.
+
+\subsection{Emphatic gemination}
+\label{emph}
+
+In Japanese, gemination sometimes occurs in native words to express emphasis. As shown in \ref{bdg}, /d/ becomes devoiced /tt/ when geminated to avoid */dd/. \citep[p. 3]{Kubozono2009}
+
+\begin{exe}
+    \ex
+    \label{bdg}
+    \begin{itemize}
+        \item [] /tada/ ‘only' $\rightarrow$ [tatta] \hspace{1cm} *[tadda]
+    \end{itemize}
+\end{exe}
+
+\subsection{Gemination from \textit{-ri} suffixation}
+\label{-ri}
+
+The suffix \textit{-ri} when attached to mimetic roots causes gemination of the root-final consonant. This gemination is blocked by nasal insertion when the root-final consonant is a voiced obstruent, as in \ref{ri}b. \citep[p. 1]{Kawahara2015}
+
+\begin{exe}
+    \ex
+    \label{ri}
+    \begin{itemize}
+        \item [a] /uka + ri/ $\rightarrow$ [ukkari] ‘absent-mindedly'
+        \item [b] /uza + ri/ $\rightarrow$ [u\textbf{n}zari] ‘sick of something' \hspace{1cm} *[uzzari]
+    \end{itemize}
+\end{exe}
+
+\section{Lexical strata of Japanese}
+\label{lexical strata}
+
+Despite the prohibition of voiced geminates in the native Japanese lexicon, they do appear in the loanword inventory of Japanese, referred to by \cite{Ito&Mester1999} as the \textsc{Foreign} strata of the Japanese lexicon. The different lexical strata of the Japanese lexicon as presented by \cite{Ito&Mester1999} are illustrated in \ref{strata}. Of these four lexical strata, the \textsc{Native} stratum is the only closed set: No new lexical items can be added, and the ones that already exist obey the prohibition of voiced geminates. This constraint is seemingly obeyed for the \textsc{Native} stratum and below, excluding only \textit{Unassimilated foreign}, for which voiced geminates are allowed.
+
+\begin{exe}
+	\ex
+    \label{strata}
+        	\textsc{Native} \\
+        	\textsc{Sino-Japanese} \\
+        	\textsc{Foreign}
+        	\begin{itemize}
+        	    \item \textit{Assimilated} $\leftarrow$ voiced geminates disallowed
+        	    \item \textit{Unassimilated} $\leftarrow$ voiced geminates allowed
+        	\end{itemize}
+\end{exe}
+
+Generally speaking, the separation of the \textsc{Foreign} strata into both \textit{Assimilated} and \textit{Unassimilated} variants is to categorize foreign loans into two separate groups: One group for which voiced geminates can be pronounced as devoiced (\textit{Assimilated}), and another for which voiced geminates are mandatory (\textit{Unassimilated}), assuming in both cases that the context would in fact license voiced gemination. From this, it follows that voiced geminates in Japanese are more marked than voiceless geminates, so I use the markedness constraint \textsc{*VoiGem}. \\
+
+Example \ref{loan} \citep[p. 3]{Kawahara2015} shows some Japanese loanwords that contain voiced geminates.
+
+\begin{exe}
+    \ex
+    \label{loan}
+    \begin{itemize}
+        \item [a] ‘red' $\rightarrow$ /reddo/
+        \item [b] ‘dog' $\rightarrow$ /doggu/ ($\rightarrow$ /dokku/)
+    \end{itemize}
+\end{exe}
+
+There exist some loanwords for which the voiced geminate consonant can optionally be pronounced as devoiced, as in \ref{loan}b, and in such cases, this is the form that ultimately assimilates into the lexicon (which likely means that this is a form in the process of lexical assimilation, and thus making the transition from \textit{Unassimilated} $\rightarrow$ \textit{Assimilated}). This tendency toward voiceless geminates is evidence for a highly ranked \textsc{*VoiGem} constraint, and the tableau in \ref{t1} shows this constraint being used to account for the winning candidate, [tatta], from \ref{bdg}. \textsc{Faith(Voice)} is outranked by \textsc{*VoiGem}, which allows for the output of the unfaithful form with the voiceless geminate.
+
+\vspace{.25cm}
+
+\begin{exe}
+\ex
+\label{t1}
+\begin{tableau}{c|c}
+\inp{\ips{tada} (emph)} \const{*VoiGem} \const{Faith(Voice)}
+\cand{tadda}             \vio{*!}   \vio{}            
+\cand[\Optimal]{tatta}    \vio{}    \vio{*}          
+\end{tableau}
+\end{exe}
+
+\vspace{.25cm}
+
+\section{Gemination licensing \& motivation}
+\label{licensing}
+
+The environment in which consonant gemination in English borrowings occurs is word-finally, when the preceding vowel is lax (or short), as in \ref{lax} \citep[p. 2]{Kawahara2015}. However, in the case of a long vowel in the phonemicized form, as in \ref{tense}, gemination does not occur \citep[p. 11]{Kubozono2009}.
+
+\begin{exe}
+    \ex
+    Gemination
+    \begin{itemize}
+        \item [a] ‘ca\textbf{t}' $\rightarrow$ [kja\textbf{tt}o]
+        \item [b] ‘pa\textbf{ck}' $\rightarrow$ [pa\textbf{kk}u]
+        \item [c] ‘re\textbf{d}' $\rightarrow$ [re\textbf{dd}o]
+        \item [d] bi\textbf{g} $\rightarrow$ [bi\textbf{gg}u]
+    \end{itemize}
+    \label{lax}
+    
+\end{exe}
+
+\begin{exe}
+    \ex
+    No gemination
+    \begin{itemize}
+        \item [a] ‘mea\textbf{t}' $\rightarrow$ [mii\textbf{t}o] \hspace{1cm} *[mii\textbf{tt}o]
+        \item [b] ‘pea\textbf{k}' $\rightarrow$ [pii\textbf{k}u] \hspace{1cm} *[pii\textbf{kk}u]
+        \item [c] par\textbf{k} $\rightarrow$ [paa\textbf{k}u] \hspace{1cm} *[paa\textbf{kk}u]
+    \end{itemize}
+    \label{tense}
+    
+\end{exe}
+
+In order to account for gemination licensing in loanwords, I give two accounts for its motivation in different contexts. The first is a discussion of syllable weight in \ref{syllableweight}, and the second a brief discussion of Lyman's Law and the avoidance of double voiced obstruent constructions in \ref{lyman}.
+
+\subsection{Syllable weight}
+\label{syllableweight}
+
+
+Japanese words display a tendency to end in Heavy-Heavy (hereafter HH) or Heavy-Light (hereafter HL) syllable sequences, with Light-Light sequences being a close third. The data in \ref{baby} shows some examples of baby speech and illustrates this tendency, as LL input words are changed in the output forms to HL words. The tendency is further supported by the process of loanword truncation, as in the examples in \ref{trunc}, where HL truncations are acceptable, but LH are converted to LL, importantly illustrating the intolerance of LH. For these reasons, I use the constraint \textsc{ProsodicForm} to account for this tendency. \citep[p. 5]{Kubozono2009}
+
+\begin{exe}
+    \ex
+    Baby words (LL $\rightarrow$ HL)
+    \label{baby}
+    \begin{itemize}
+        \item [a] ba.ba $\rightarrow$ baa.ba ‘grandmother'
+        \item [b] ku.tu $\rightarrow$ kuk.ku ‘shoes'
+        \item [c] ne.ru $\rightarrow$ nen.ne ‘to sleep'
+    \end{itemize}
+\end{exe}
+
+\begin{exe}
+    \ex
+    \label{trunc}
+    Loanword truncation (HL)
+    \begin{itemize}
+        \item [a] roo.tee.sjon $\rightarrow$ roo.te ‘rotation'
+        \item [b] pan.hu.ret.to $\rightarrow$ pan.hu ‘pamphlet'
+    \end{itemize}
+    Loanword truncation (LH $\rightarrow$ LL)
+    \begin{itemize}
+        \item [c] ro.kee.sjon $\rightarrow$ ro.ke ‘location' \hspace{1cm} *ro.kee
+    \end{itemize}
+\end{exe}
+
+Japanese disallows closed syllables (CVC) for the most part \citep[p. 7]{Shinohara1996}, but they still need to be expressed in the output when the source borrowed word contains them, because \textsc{Max(C)} is ranked high in my analysis, meaning consonants should not be deleted in the output forms. \\
+
+The flowchart in \ref{flow} illustrates the process for the phonemicization of the English word ‘pack' into a Japanese loanword, and its accompanying tableau is in \ref{t2}. (\textit{Note}: The first half of a geminate obstruent can be represented as /Q/, and in terms of weight, it counts as one mora ($\mu$). Thus, \ref{lax}b can also be written as [paQ.ku].)
+
+\begin{exe}
+    \ex
+    \label{flow}
+    \begin{itemize}
+        \item [i] ‘pack' /pak/ is a *CVC syllable
+        \item [] \hspace{2cm} $\Downarrow$
+        \item [ii] /u/ is epenthesized to break this into CV.CV $\rightarrow$ /pa.ku/
+        \item [] \hspace{2cm} $\Downarrow$
+        \item [iii] /pa.ku/ is *LL word-finally
+        \item [] \hspace{2cm} $\Downarrow$
+        \item [iv] moraic obstruent /Q/ is added to syllable 1 to increase moraicity $\rightarrow$ /pa + Q/
+        \item [] \hspace{2cm} $\Downarrow$
+        \item [v] [paQ.ku] is HL word-finally; \textsc{ProsodicForm} is satisfied
+    \end{itemize}
+\end{exe}
+
+\vspace{.25cm}
+
+%\begin{sidewaystable}
+\begin{exe}
+\ex
+\label{t2}
+\begin{tableau}{c:c:c|c:c}
+\inp{\ips{pak} ‘pack'}      \const{Max(C)}  \const{ProsodicForm}          \const{NoCoda}                  \const{Dep(V)}       \const{Dep($\mu$)}  
+\cand{pak}               \vio{}            \vio{}                          \vio{*!}                   \vio{}                      \vio{}              
+\cand*{paQk}               \vio{}            \vio{}                       \vio{*!}                   \vio{}                         \vio{*}           
+\cand*[\Optimal]{paQ.ku}   \vio{}            \vio{}                         \vio{}                    \vio{*}                        \vio{**}
+\cand*{pa.Qku}             \vio{}            \vio{*!}                         \vio{}                    \vio{*}                        \vio{**} 
+\cand{pa.ku}               \vio{}            \vio{*!}                          \vio{}                   \vio{*}                       \vio{*}
+\cand{pa}                   \vio{*!}           \vio{}                          \vio{}                  \vio{}                            \vio{}
+\end{tableau}
+\end{exe}
+%\end{sidewaystable}
+\vspace{.5cm}
+
+Candidates (a) and (b) are ruled out by violations of \textsc{NoCoda}, which are equal in weight to the violations of both \textsc{ProsodicForm} and \textsc{Max(C)}. Candidates (d) and (e) incur violations of \textsc{ProsodicForm}, with (d) being LH word-finally, and (e) being LL. Candidate (f) violates \textsc{Max(C)}, since its coda-position /k/ was deleted. The low-ranking constraints \textsc{Dep(V)} and \textsc{Dep($\mu$)} are violable, as the winning candidate (c) incurs a violation of \textsc{Dep(V)} via /u/-epenthesis, and two violations of \textsc{Dep($\mu$)}: one via /u/-epenthesis, and one via $\mu$-epenthesis.
+
+\textit{A note on} /Q/: I am making the assumption that the moraic obstruent /Q/ does not count as a coda on its own, but does however increase moraicity of the containing syllable, and thus contributes to the satisfaction of \textsc{ProsodicForm}. The evidence for this is possibly the non-realization of /Q/ as a phonetic segment, and instead it is a theoretical unit that anchors to the following consonant, and adds a mora ($\mu$). It is for this reason that candidate (b) in the tableau in \ref{t2} incurs only one violation of \textsc{NoCoda}, but two violations of \textsc{Dep($\mu$)}.
+
+Now recall example (b) from \ref{tense} above:
+
+\begin{exe}
+\begin{itemize}
+    \item [(\ref{tense}) b] ‘pea\textbf{k}' $\rightarrow$ [pii.\textbf{k}u] \hspace{1cm} *[pii\textbf{Q.k}u] 
+\end{itemize}
+\end{exe}
+
+The question now is Why is gemination not licensed in this case? According to my analysis with syllable weight and the \textsc{ProsodicForm} constraint from earlier, the word-final /k/ in \ref{tense}b should be allowed to geminate, resulting in [piiQ.ku]. This is not the attested output, however. Thus, it either seems insufficient to say that word-final HH / HL forms are desired, or “Heavy" syllables need to be more strictly defined. If [piiQ] were not considered a Heavy syllable, the gemination would be blocked as we see in the desired output. For this reason, I use the constraint \textsc{*Superheavy} to account for the prohibiton of Superheavy syllables containing three moras. In other words, long vowels count as two moras making Japanese a quantity sensitive language in the context of syllable weight. \\
+
+This constraint is put to use in the tableau in \ref{t3} to account for the winning candidate, [pii.ku]. Candidates (a) and (b) are ruled out via \textsc{NoCoda} violations. Candidate (e) is ruled out via a \textsc{Max(C)} violation, since its coda /k/ was deleted. Candidates (c) and (d) are tied at this point, since neither violate \textsc{ProsodicForm}, but (c) is ultimately ruled out via a \textsc{*Superheavy} violation from its trimoraic first syllable, /piiQ/. 
+
+    
+\vspace{.25cm}
+%\begin{sidewaystable}
+\begin{exe}
+\ex
+\label{t3}
+\begin{tableau}{c:c:c|c|c:c}
+\inp{\ips{piik} ‘peak'}      \const{Max(C)}  \const{ProsForm}          \const{NoCoda}              \const{*Superheavy}      \const{Dep(V)}       \const{Dep($\mu$)}    
+\cand{piik}               \vio{}            \vio{}                          \vio{*!}                   \vio{}                      \vio{}                \vio{}          
+\cand*{piiQk}               \vio{}            \vio{}                       \vio{*!}                   \vio{}                         \vio{}              \vio{*} 
+\cand*{piiQ.ku}              \vio{}            \vio{}                         \vio{}                    \vio{*!}                        \vio{*}           \vio{**} 
+\cand[\Optimal]{pii.ku}     \vio{}            \vio{}                          \vio{}                   \vio{}                       \vio{*}             \vio{*} 
+\cand{pii}                   \vio{*!}           \vio{}                          \vio{}                  \vio{}                            \vio{}            \vio{} 
+\end{tableau}
+\end{exe}
+%\end{sidewaystable}
+\vspace{.5cm}
+
+
+
+\subsection{Lyman's Law and the D2 constraint}
+\label{lyman}
+
+According to \cite{Rice2006}, there is a constraint present in Japanese phonology (among other languages) known as Lyman's Law which deals with the well-formedness of morphemes. Specifically, this constraint says that morphemes cannot contain two voiced obstruents, though there are some exceptions. Lyman's Law can be observed operating throughout Japanese phonology by simply looking at the combinations of voiced + voiceless segments possible in native words. This is illustrated in \ref{*dvdv} \citep[p. 14]{Rice2006}, where the interactions between [d], [t], [b], and [f] \footnote{[f] is one of the allophones that functions as the voiceless counterpart of /b/ in Japanese} are shown. Crucially, [+voi], [+voi] combinations within a morpheme are not found in this example. 
+
+\begin{exe}
+    \ex
+    \label{*dvdv}
+    \begin{itemize}
+        \item [a] /futa/ ‘lid' ([-voi, [-voi])
+        \item [b] /fuda/ ‘sign' ([-voi], [+voi])
+        \item [c] /buta/ ‘pig' ([+voi], [-voi])
+        \item [d] */buda/ ([+voi], [+voi])
+    \end{itemize}
+\end{exe}
+
+Now recall example (b) from \ref{loan} earlier:
+
+\begin{exe}
+\begin{itemize}
+    \item [(\ref{loan}) b] ‘dog' $\rightarrow$ /doggu/ ($\rightarrow$ /dokku/)
+\end{itemize}
+\end{exe}
+
+Previously, I had accounted for this optionality in geminate devoicing by positing that voiced geminates are inherently more marked than voiceless geminates, and proposing the use of the constraint \textsc{*VoiGem}. Now with the introduction of Lyman's Law, I can provide an alternative account for the tendency of speakers to devoice the geminate from \ref{loan}b using the tableau in \ref{t4}. The markedness constraint \textsc{*D2_{m}} \citep[p. 37]{Ito&Mester2003} says that there should not be two voiced obstruents within a morpheme. This successfully rules out candidate (a) [doggu] (which contains two voiced obstruents within a morpheme), and accounts for the winner, [dokku].
+
+\vspace{.25cm}
+
+\begin{exe}
+\ex
+\label{t4}
+\begin{tableau}{c|c}
+\inp{\ips{doggu} ‘dog'} \const{*D2_{m}} \const{Faith(Voice)}
+\cand{doggu}             \vio{*!}   \vio{}            
+\cand[\Optimal]{dokku}    \vio{}    \vio{*}          
+\end{tableau}
+\end{exe}
+
+\vspace{.25cm}
+
+The tableau in \ref{t5} shows an example (\ref{loan}a) for which this analysis successfully predicts the voiced geminate winner, since there is no \textsc{*D2_{m}} violation and thus no motivation for devoicing of the geminate.
+
+\vspace{.25cm}
+
+\begin{exe}
+\ex
+\label{t5}
+\begin{tableau}{c|c}
+\inp{\ips{reddo} ‘red'} \const{*D2_{m}} \const{Faith(Voice)}
+\cand[\Optimal]{reddo}   \vio{}      \vio{}            
+\cand{retto}               \vio{}    \vio{*!}          
+\end{tableau}
+\end{exe}
+
+\vspace{.25cm}
+
+\section{Conclusion}
+\label{conclusion}
+
+Geminates in Japanese loanwords provide a source of data that allows for inspection of issues that arise mainly in the non-native phonotactics of Japanese, and also allows us to analyze these phenomena alongside the native phonotactics. Section \ref{phonemic} introduced the prohibition of voiced geminates in the native phonology of Japanese. Then, in section \ref{lexical strata}, the discussion of the different lexical strata of Japanese showed that voiced geminates are seemingly more marked than voiceless ones. Section \ref{licensing} presented an analysis of syllable weight and Lyman's Law in Japanese, and how they inspire gemination and geminate devoicing respectively. Syllable weight plays an important role in the licensing of gemination in loanwords, and it seems that Japanese is very sensitive to syllable weight. Further research about borrowings from languages other than English into Japanese might allow for alternative analyses of how syllable weight is encoded in both the source words and in the Japanese phonemicizations.
+
+
+\section{Constraints}
+\label{Constraints}
+\textsc{*VoiGem}: Voiced obstruent geminates are prohibited \\
+\textsc{Faith(Voice)}: Don't change voicing values from the input \\
+\textsc{ProsodicForm}: Words with two or more syllables must end in HH or HL sequences \\
+\textsc{Max(C)}: Don't delete consonants in output forms\\
+\textsc{NoCoda}: Output forms must not have codas \\
+\textsc{Dep(V)}: Don't epenthesize vowels in output forms \\
+\textsc{Dep($\mu$)}: Don't increase moraicity in output forms \\
+\textsc{*Superheavy}: Trimoraic syllables are banned \\
+\textsc{*D2_{m}}: Output forms must not have two voiced obstruents within a morpheme
+
+\bibliographystyle{apa}
+\bibliography{refs}
+
+\end{document}

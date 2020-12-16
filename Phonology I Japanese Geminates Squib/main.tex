@@ -1,0 +1,72 @@
+\documentclass{article}
+\usepackage[letterpaper, margin=1in]{geometry}
+\usepackage{ot-tableau}
+\usepackage{setspace}
+\doublespacing
+\usepackage[utf8]{inputenc}
+\usepackage{natbib}
+\usepackage{gb4e}
+
+
+
+\title{Gemination in Japanese Loanwords}
+\author{Derek Andersen}
+\date{2019}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+Japanese borrowings of English words provide a rich source of data for the analysis of the gemination of certain consonantal segments in Japanese, and in  particular, the types of segments for which Japanese phonology allows gemination, and the phonological  implications of gemination with respect to both the input (source word) and output (phonemicized) forms. This analysis of gemination in Japanese loanword phonology will be focusing mainly on the \textit{voiced obstruent} geminates /bb/, /dd/, /gg/. Specifically, the issues that arise with foreign word gemination when compared to the native phonotactics of Japanese.
+
+\subsection{Restrictions on Gemination}
+
+The phonemic inventory of Japanese contains singleton consonants (like /p/, /t/, /k/) as well as geminate consonants (/pp/, /tt/, /kk/). As shown by the minimal pair data in \ref{minimalpair}, they are contrastive, and thus separate phonemes.
+
+\begin{exe}
+    \ex
+    \label{minimalpair}
+    \begin{itemize}
+        \item [a] /kita/ ‘came' vs. /kitta/ ‘cut (past)'
+        \item [b] /saki/ ‘point' vs. /sakki/ ‘a short time ago'
+    \end{itemize}
+    
+\end{exe}
+
+Native Japanese phonotactics (in contrast to its foreign phonotactics) disallow the gemination of certain consonants. In particular, these are the \textit{voiced obstruent} consonants /b/, /d/, /g/ and the \textit{voiceless fricative} /h/. Despite the prohibition of voiced geminates in the native Japanese lexicon, they do appear in the loanword inventory of Japanese, referred to by \cite{Ito&Mester1999} as “the foreign strata" of the Japanese lexicon. The different lexical strata of the Japanese lexicon are illustrated in \ref{strata}. Of these four lexical strata, the \textsc{Native} stratum is the only closed set: No new lexical items can be added, and the ones that already exist obey the prohibition of voiced geminates. This constraint is seemingly obeyed for the \textsc{Native} stratum and below, excluding only \textsc{Unassimilated foreign}, for which voiced geminates are allowed.
+
+\begin{exe}
+	\ex
+    \label{strata}
+        	\textsc{Native} \\
+        	\textsc{Sino-Japanese} \\
+        	\textsc{Assimilated foreign} \\
+            \textsc{Unassimilated foreign}
+\end{exe}
+
+Generally speaking, the separation of the \textit{Foreign} strata into both \textsc{Assimilated} and \textsc{Unassimilated} variants is to categorize foreign loans into two separate groups: One group for which voiced geminates can be pronounced as devoiced (Assimilated), and another for which voiced geminates are mandatory (Unassimilated), assuming in both cases that the context would in fact license voiced gemination. From this, it follows that voiced geminates in Japanese are more marked than voiceless geminates, so I propose the markedness constraint \const{*VoicedGeminate}.
+\begin{exe}
+    \const{*VoicedGeminate}: Voiced geminates are prohibited
+\end{exe}
+
+\subsection{Gemination Licensing}
+
+The dataset in \ref{wordfinal} \citep[p. 2]{Kawahara2015} shows examples of word-final consonants from English words undergoing gemination in their Japanese loan counterparts, regardless of their voicing values.
+
+\begin{exe}
+    \ex
+    \label{wordfinal}
+    \begin{itemize}
+        \item [a] ca\textbf{t} $\rightarrow$ [kya\textbf{tt}o]
+        \item [b] pa\textbf{ck} $\rightarrow$ [pa\textbf{kk}u]
+        \item [c] re\textbf{d} $\rightarrow$ [re\textbf{dd}o]
+        \item [d] bi\textbf{g} $\rightarrow$ [bi\textbf{gg}u]
+    \end{itemize}
+\end{exe}
+
+Specifically, what allows for the emergence of voiced geminates in these examples is the lax vowels followed by word-final consonants \cite[p. 2]{Kawahara2015}.
+
+\bibliographystyle{apa}
+\bibliography{refs}
+\end{document}

@@ -1,0 +1,164 @@
+\documentclass{article}
+\usepackage[letterpaper, margin=1in]{geometry}
+\usepackage{ot-tableau}
+\usepackage{setspace}
+%\doublespacing
+\usepackage[utf8]{inputenc}
+\usepackage{natbib}
+\usepackage{gb4e}
+\usepackage{rotating}
+
+\title{Gemination in Japanese Loanwords}
+\author{Derek Andersen}
+\date{November 2019}
+
+\begin{document}
+
+%\maketitle
+\begin{center}
+    \section*{Gemination in Japanese Loanwords}
+    Derek Andersen
+\end{center}
+
+
+\section{Phonemic inventory of Japanese}
+
+The native phonemic inventory of Japanese consists of singleton consonants (like /p/, /t/, /k/) as well as geminate consonants (like /pp/, /tt/, /kk/). As shown by the minimal pair data in \ref{minimalpair}, they are contrastive, and thus separate phonemes. \citep[p. 2]{Kubozono2009}
+
+\begin{exe}
+    \ex
+    \label{minimalpair}
+    \begin{itemize}
+        \item [a] /kita/ ‘came' vs. /kitta/ ‘cut (past)'
+        \item [b] /saki/ ‘point' vs. /sakki/ ‘a short time ago'
+    \end{itemize}
+    
+\end{exe}
+
+However, native Japanese phonotactics disallow the gemination of certain consonants. In particular, the gemination of voiced obstruents (/b/, /d/, /g/, /z/, etc.) is prohibited.
+
+\subsection{Emphatic gemination}
+
+In Japanese, gemination sometimes occurs in native words to express emphasis. As shown in \ref{bdg}, /d/ becomes devoiced /tt/ when geminated to avoid */dd/. \citep[p. 3]{Kubozono2009}
+
+\begin{exe}
+    \ex
+    \label{bdg}
+    \begin{itemize}
+        \item [] /tada/ ‘only' $\rightarrow$ [tatta] \hspace{1cm} *[tadda]
+    \end{itemize}
+\end{exe}
+
+%\subsection{Gemination from \textit{-ri} suffixation}
+
+%The suffix \textit{-ri} when attached to mimetic roots causes gemination of the root-final consonant. This gemination is blocked by nasal insertion when the root-final consonant is a voiced obstruent, as in \ref{ri}b.
+
+%\begin{exe}
+%    \ex
+%    \label{ri}
+ %   \begin{itemize}
+ %       \item [a] /uka + ri/ $\rightarrow$ [ukkari] ‘absent-mindedly'
+ %       \item [b] /uza + ri/ $\rightarrow$ [u\textbf{n}zari] ‘sick of something' \hspace{1cm} *[uzzari]
+ %   \end{itemize}
+%\end{exe}
+
+\section{Loanword gemination}
+
+Despite the lack of voiced geminates in native Japanese phonology, they do appear in loanwords, as in \ref{loan}. \citep[p. 3]{Kawahara2015}
+
+\begin{exe}
+    \ex
+    \label{loan}
+    \begin{itemize}
+        \item [a] ‘red' $\rightarrow$ /reddo/
+        \item [b] ‘dog' $\rightarrow$ /doggu/ ($\rightarrow$ /dokku/)
+    \end{itemize}
+\end{exe}
+
+However, there exist some loanwords for which the voiced geminate consonant can optionally be pronounced as devoiced, as in \ref{loan}b, and in such cases, this is the form that ultimately assimilates into the lexicon. For this reason, I will use the markedness constraint \textsc{*VoiGem}. The tableau in \ref{t1} shows this constraint being used to account for the winning candidate, /tatta/, from \ref{bdg}.
+
+\vspace{.25cm}
+
+\begin{exe}
+\ex
+\label{t1}
+\begin{tableau}{c|c}
+\inp{\ips{tada} (emph)} \const{*VoiGem} \const{Faith(Voice)}
+\cand{tadda}             \vio{*!}   \vio{}            
+\cand[\Optimal]{tatta}    \vio{}    \vio{*}          
+\end{tableau}
+\end{exe}
+
+\vspace{.25cm}
+
+\subsection{Gemination licensing \& motivation}
+
+The environment in which consonant gemination in English borrowings occurs is word-finally, when the preceding vowel is lax, as in \ref{lax}. \citep[p. 2]{Kawahara2015}
+
+\begin{exe}
+    \ex
+    \begin{itemize}
+        \item [a] ‘ca\textbf{t}' $\rightarrow$ [kya\textbf{tt}o]
+        \item [b] ‘pa\textbf{ck}' $\rightarrow$ [pa\textbf{kk}u]
+        %\item [c] ‘re\textbf{d}' $\rightarrow$ [re\textbf{dd}o]
+    \end{itemize}
+    \label{lax}
+    
+\end{exe}
+
+\subsubsection{Syllable weight}
+Background:
+
+\begin{itemize}
+    \item [1.] The first half of a geminate obstruent can be represented as /Q/, and in terms of weight, it counts as one mora ($\mu$). Thus, \ref{lax}b can also be written as [paQ.ku].
+    \item [2.] Japanese words tend to end in HH or HL sequences, so I use the constraint \textsc{ProsodicForm}. \citep[p. 4]{Kubozono2009}
+    \item [3.] Japanese disallows closed syllables (CVC) for the most part \citep[p. 7]{Shinohara1996}, but they still need to be expressed in the output when the source borrowed word contains them, because \textsc{Max(C)} is ranked high.
+\end{itemize}
+
+ The flowchart in \ref{flow} illustrates the process for the phonemicization of the English word ‘pack' into a Japanese loanword, and its accompanying tableau is in \ref{t2}.
+
+\begin{exe}
+    \ex
+    \label{flow}
+    \begin{itemize}
+        \item [i] ‘pack' /pak/ is a *CVC syllable
+        \item [ii] /u/ is epenthesized to break this into CV.CV $\rightarrow$ /pa.ku/
+        \item [iii] /pa.ku/ is *LL word-finally
+        \item [iv] moraic obstruent /Q/ is added to syllable 1 to increase moraicity $\rightarrow$ /pa + Q/
+        \item [v] [paQ.ku] is HL word-finally; \textsc{ProsodicForm} is satisfied
+    \end{itemize}
+\end{exe}
+
+\vspace{.25cm}
+
+%\begin{sidewaystable}
+\begin{exe}
+\ex
+\label{t2}
+\begin{tableau}{c:c:c|c:c}
+\inp{\ips{pak} ‘pack'}      \const{Max(C)}  \const{ProsodicForm}          \const{NoCoda}                  \const{Dep(V)}       \const{Dep($\mu$)}  
+\cand{pak}               \vio{}            \vio{}                          \vio{*!}                   \vio{}                      \vio{}              
+\cand*{paQk}               \vio{}            \vio{}                       \vio{*!}                   \vio{}                         \vio{*}           
+\cand*[\Optimal]{paQ.ku}   \vio{}            \vio{}                         \vio{}                    \vio{*}                        \vio{**}
+\cand*{pa.Qku}             \vio{}            \vio{*!}                         \vio{}                    \vio{*}                        \vio{**} 
+\cand{pa.ku}               \vio{}            \vio{*!}                          \vio{}                   \vio{*}                       \vio{*}
+\cand{pa}                   \vio{*!}           \vio{}                          \vio{}                  \vio{}                            \vio{}
+\end{tableau}
+\end{exe}
+%\end{sidewaystable}
+
+The moraic obstruent /Q/ does not count as a coda on its own, but it does increase moraicity and thus contributes to \textsc{ProsodicForm}.
+
+\section*{Constraints}
+\textsc{*VoiGem}: Voiced obstruent geminates are prohibited \\
+\textsc{Faith(Voice)}: Don't change voicing values in the output \\
+\textsc{ProsodicForm}: Words with 2 or more syllables must end in HH or HL sequences \\
+\textsc{Max(C)}: Don't delete consonants in the output \\
+\textsc{NoCoda}: Output forms must not have codas \\
+\textsc{Dep(V)}: Don't epenthesize vowels in the output forms \\
+\textsc{Dep($\mu$)}: Don't increase moraicity in the output forms
+
+\bibliographystyle{apa}
+\bibliography{refs}
+
+\end{document}
